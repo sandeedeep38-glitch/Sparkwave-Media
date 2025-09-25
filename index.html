@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkwave Media - Digital Marketing Agency</title>
+    <meta name="description" content="Sparkwave Media is a modern digital marketing agency specializing in SEO, social media advertising, branding, and content marketing. Transform your digital presence with our expert team.">
+    <meta property="og:title" content="Sparkwave Media - Digital Marketing Agency">
+    <meta property="og:description" content="Transform your digital presence with our expert SEO, social media, and branding services.">
+    <meta property="og:type" content="website">
+    
+    <!-- Formspree Configuration - Replace 'YOUR_FORM_ID' with your actual Formspree form ID -->
+    <meta name="formspree-endpoint" content="YOUR_FORM_ID">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h1 class="brand-text">Sparkwave Media</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-menu" id="nav-menu">
+                    <button class="nav-link" onclick="scrollToSection('home')" data-testid="nav-home">Home</button>
+                    <button class="nav-link" onclick="scrollToSection('about')" data-testid="nav-about">About</button>
+                    <button class="nav-link" onclick="scrollToSection('services')" data-testid="nav-services">Services</button>
+                    <button class="nav-link" onclick="scrollToSection('contact')" data-testid="nav-contact">Contact</button>
+                </div>
+                
+                <!-- Desktop Actions -->
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" data-testid="button-theme-toggle">
+                        <i data-lucide="moon" class="theme-icon" id="theme-icon"></i>
+                    </button>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')" data-testid="button-get-started">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="mobile-actions">
+                    <button class="theme-toggle" id="theme-toggle-mobile">
+                        <i data-lucide="moon" class="theme-icon" id="theme-icon-mobile"></i>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" data-testid="button-mobile-menu">
+                        <i data-lucide="menu" class="menu-icon" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="mobile-nav-link" onclick="scrollToSection('home')" data-testid="mobile-nav-home">Home</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('about')" data-testid="mobile-nav-about">About</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('services')" data-testid="mobile-nav-services">Services</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('contact')" data-testid="mobile-nav-contact">Contact</button>
+                <div class="mobile-menu-cta">
+                    <button class="btn btn-primary btn-full" onclick="scrollToSection('contact')" data-testid="mobile-button-get-started">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i data-lucide="zap" class="hero-brand-icon"></i>
+                </div>
+                
+                <h1 class="hero-title">Transform Your Digital Presence</h1>
+                
+                <p class="hero-description">
+                    Sparkwave Media delivers cutting-edge digital marketing solutions that drive growth, 
+                    engagement, and success for forward-thinking brands.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-hero-primary" onclick="scrollToSection('contact')" data-testid="button-start-project">
+                        Start Your Project
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                    <button class="btn btn-hero-outline" onclick="scrollToSection('services')" data-testid="button-our-services">
+                        Our Services
+                    </button>
+                </div>
+                
+                <div class="hero-trust">
+                    <p class="trust-text">Trusted by innovative companies</p>
+                    <div class="trust-logos">
+                        <div class="trust-logo"></div>
+                        <div class="trust-logo"></div>
+                        <div class="trust-logo"></div>
+                        <div class="trust-logo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <h2 class="section-title">About Sparkwave Media</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    We're a dynamic team of digital marketing specialists passionate about helping 
+                    businesses thrive in the digital landscape.
+                </p>
+            </div>
+
+            <div class="about-content" data-animate>
+                <div class="about-text">
+                    <h3 class="about-subtitle">Driving Digital Excellence</h3>
+                    <div class="about-paragraphs">
+                        <p>
+                            Founded with a vision to revolutionize digital marketing, Sparkwave Media combines 
+                            creativity with data-driven strategies to deliver exceptional results for our clients.
+                        </p>
+                        <p>
+                            Our team of experts specializes in SEO optimization, social media advertising, 
+                            brand development, and content marketing. We believe in building lasting partnerships 
+                            with our clients and growing together.
+                        </p>
+                        <p>
+                            Every campaign we create is tailored to your unique business goals, ensuring 
+                            maximum impact and sustainable growth in today's competitive digital marketplace.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-mission">
+                    <div class="mission-card">
+                        <h3 class="mission-title">Our Mission</h3>
+                        <p class="mission-description">
+                            To empower businesses with innovative digital marketing solutions that drive 
+                            measurable growth, enhance brand visibility, and create meaningful connections 
+                            with their target audiences.
+                        </p>
+                        
+                        <h4 class="values-title">Our Values</h4>
+                        <ul class="values-list">
+                            <li class="value-item">
+                                <span class="value-dot"></span>
+                                <span>Transparency in every client interaction</span>
+                            </li>
+                            <li class="value-item">
+                                <span class="value-dot"></span>
+                                <span>Innovation in our strategic approach</span>
+                            </li>
+                            <li class="value-item">
+                                <span class="value-dot"></span>
+                                <span>Excellence in campaign execution</span>
+                            </li>
+                            <li class="value-item">
+                                <span class="value-dot"></span>
+                                <span>Results that exceed expectations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section" data-animate>
+                <div class="stats-grid">
+                    <div class="stat-item" data-animate-delay="0">
+                        <div class="stat-icon">
+                            <i data-lucide="users" class="stat-icon-svg"></i>
+                        </div>
+                        <div class="stat-value">200+</div>
+                        <div class="stat-label">Clients Served</div>
+                    </div>
+                    <div class="stat-item" data-animate-delay="100">
+                        <div class="stat-icon">
+                            <i data-lucide="award" class="stat-icon-svg"></i>
+                        </div>
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item" data-animate-delay="200">
+                        <div class="stat-icon">
+                            <i data-lucide="trending-up" class="stat-icon-svg"></i>
+                        </div>
+                        <div class="stat-value">150%</div>
+                        <div class="stat-label">Avg Growth</div>
+                    </div>
+                    <div class="stat-item" data-animate-delay="300">
+                        <div class="stat-icon">
+                            <i data-lucide="target" class="stat-icon-svg"></i>
+                        </div>
+                        <div class="stat-value">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Comprehensive digital marketing solutions tailored to your business needs and growth objectives.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-animate>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="search" class="service-icon-svg"></i>
+                        </div>
+                        <button class="service-learn-more" onclick="handleLearnMore('SEO Optimization')" data-testid="button-learn-more-seo-optimization">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon-sm"></i>
+                        </button>
+                    </div>
+                    <h3 class="service-title">SEO Optimization</h3>
+                    <p class="service-description">
+                        Boost your search rankings with our comprehensive SEO strategies that drive organic traffic and improve visibility.
+                    </p>
+                    <ul class="service-features">
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Keyword Research</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>On-page Optimization</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Technical SEO</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Content Strategy</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-animate>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="megaphone" class="service-icon-svg"></i>
+                        </div>
+                        <button class="service-learn-more" onclick="handleLearnMore('Social Media Ads')" data-testid="button-learn-more-social-media-ads">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon-sm"></i>
+                        </button>
+                    </div>
+                    <h3 class="service-title">Social Media Ads</h3>
+                    <p class="service-description">
+                        Reach your target audience with precision-targeted social media advertising campaigns across all major platforms.
+                    </p>
+                    <ul class="service-features">
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Facebook Ads</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Instagram Marketing</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>LinkedIn Campaigns</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>YouTube Advertising</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-animate>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="palette" class="service-icon-svg"></i>
+                        </div>
+                        <button class="service-learn-more" onclick="handleLearnMore('Brand Development')" data-testid="button-learn-more-brand-development">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon-sm"></i>
+                        </button>
+                    </div>
+                    <h3 class="service-title">Brand Development</h3>
+                    <p class="service-description">
+                        Create a powerful brand identity that resonates with your audience and sets you apart from the competition.
+                    </p>
+                    <ul class="service-features">
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Brand Strategy</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Logo Design</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Visual Identity</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Brand Guidelines</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-animate>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="file-text" class="service-icon-svg"></i>
+                        </div>
+                        <button class="service-learn-more" onclick="handleLearnMore('Content Marketing')" data-testid="button-learn-more-content-marketing">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon-sm"></i>
+                        </button>
+                    </div>
+                    <h3 class="service-title">Content Marketing</h3>
+                    <p class="service-description">
+                        Engage your audience with compelling content that tells your story and drives meaningful interactions.
+                    </p>
+                    <ul class="service-features">
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Content Strategy</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Blog Writing</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Video Production</span>
+                        </li>
+                        <li class="service-feature">
+                            <span class="feature-dot"></span>
+                            <span>Email Campaigns</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <div class="cta-card">
+                    <h3 class="cta-title">Ready to Get Started?</h3>
+                    <p class="cta-description">
+                        Let's discuss how our digital marketing expertise can help grow your business 
+                        and achieve your goals.
+                    </p>
+                    <button class="btn btn-primary btn-lg" onclick="scrollToSection('contact')" data-testid="button-discuss-project">
+                        Discuss Your Project
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Ready to transform your digital presence? Let's discuss your project and create 
+                    a strategy that drives results.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div class="contact-card">
+                        <h3 class="contact-form-title">Send us a message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    class="form-input"
+                                    placeholder="Your full name"
+                                    data-testid="input-name"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    class="form-input"
+                                    placeholder="your@email.com"
+                                    data-testid="input-email"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    required 
+                                    rows="5" 
+                                    class="form-textarea"
+                                    placeholder="Tell us about your project..."
+                                    data-testid="textarea-message"
+                                ></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full btn-lg" data-testid="button-send-message">
+                                <span class="btn-text">Send Message</span>
+                                <i data-lucide="send" class="btn-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-intro">
+                        <h3 class="contact-intro-title">Let's Start a Conversation</h3>
+                        <p class="contact-intro-text">
+                            We're here to help you achieve your digital marketing goals. Whether you're 
+                            looking to increase brand awareness, drive more traffic, or boost conversions, 
+                            our team has the expertise to make it happen.
+                        </p>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="mail" class="contact-icon"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <h4 class="contact-item-title">Email Us</h4>
+                                <p class="contact-item-value">hello@sparkwavemedia.com</p>
+                                <p class="contact-item-description">Send us an email anytime</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="phone" class="contact-icon"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <h4 class="contact-item-title">Call Us</h4>
+                                <p class="contact-item-value">+91 9553717616</p>
+                                <p class="contact-item-description">Mon-Fri from 8am to 5pm</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="map-pin" class="contact-icon"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <h4 class="contact-item-title">Visit Us</h4>
+                                <p class="contact-item-value">Kukatpally TS</p>
+                                <p class="contact-item-description">Come say hello at our office</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-guarantee">
+                        <h4 class="guarantee-title">Quick Response Guarantee</h4>
+                        <p class="guarantee-text">
+                            We typically respond to all inquiries within 2-4 hours during business hours. 
+                            For urgent matters, don't hesitate to call us directly.
+                        </p>
+                        <div class="demo-notice" id="demo-notice">
+                            <p class="demo-text">
+                                <strong>Demo Mode:</strong> To enable real form submissions, replace 'YOUR_FORM_ID' in config.js with your Formspree form ID.
+                                <br><small>Get your form ID at <a href="https://formspree.io" target="_blank" style="color: inherit; text-decoration: underline;">formspree.io</a></small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i data-lucide="zap" class="footer-brand-icon"></i>
+                        <h3 class="footer-brand-text">Sparkwave Media</h3>
+                    </div>
+                    <p class="footer-description">
+                        Transforming businesses through innovative digital marketing strategies. 
+                        We're passionate about helping brands grow and succeed in the digital landscape.
+                    </p>
+                    <div class="footer-social">
+                        <button class="social-link" onclick="handleSocialClick('facebook')" data-testid="social-facebook">
+                            <i data-lucide="facebook" class="social-icon"></i>
+                        </button>
+                        <button class="social-link" onclick="handleSocialClick('twitter')" data-testid="social-twitter">
+                            <i data-lucide="twitter" class="social-icon"></i>
+                        </button>
+                        <button class="social-link" onclick="handleSocialClick('linkedin')" data-testid="social-linkedin">
+                            <i data-lucide="linkedin" class="social-icon"></i>
+                        </button>
+                        <button class="social-link" onclick="handleSocialClick('instagram')" data-testid="social-instagram">
+                            <i data-lucide="instagram" class="social-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li>
+                            <button class="footer-link" onclick="scrollToSection('home')" data-testid="footer-home">Home</button>
+                        </li>
+                        <li>
+                            <button class="footer-link" onclick="scrollToSection('about')" data-testid="footer-about">About Us</button>
+                        </li>
+                        <li>
+                            <button class="footer-link" onclick="scrollToSection('services')" data-testid="footer-services">Services</button>
+                        </li>
+                        <li>
+                            <button class="footer-link" onclick="scrollToSection('contact')" data-testid="footer-contact">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4 class="footer-services-title">Services</h4>
+                    <ul class="footer-services-list">
+                        <li class="footer-service-item">SEO Optimization</li>
+                        <li class="footer-service-item">Social Media Ads</li>
+                        <li class="footer-service-item">Brand Development</li>
+                        <li class="footer-service-item">Content Marketing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © <span id="current-year"></span> Sparkwave Media. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <button class="footer-legal-link" onclick="handleLegalClick('privacy')" data-testid="footer-privacy">
+                        Privacy Policy
+                    </button>
+                    <button class="footer-legal-link" onclick="handleLegalClick('terms')" data-testid="footer-terms">
+                        Terms of Service
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <div class="toast-header">
+                <span class="toast-title" id="toast-title">Success</span>
+                <button class="toast-close" onclick="hideToast()">
+                    <i data-lucide="x" class="toast-close-icon"></i>
+                </button>
+            </div>
+            <p class="toast-message" id="toast-message">Message sent successfully!</p>
+        </div>
+    </div>
+
+    <!-- Configuration -->
+    <script src="config.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
